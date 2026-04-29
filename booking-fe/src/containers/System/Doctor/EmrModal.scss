@@ -1,0 +1,51 @@
+.emr-modal {
+    .emr-form {
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1f3b6f;
+            text-transform: uppercase;
+            border-bottom: 2px solid #dfe6f2;
+            padding-bottom: 6px;
+            margin: 16px 0 10px;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+
+            label {
+                display: block;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 4px;
+                font-size: 13px;
+            }
+
+            textarea.form-control,
+            input.form-control {
+                font-size: 14px;
+            }
+        }
+
+        .row {
+            margin-right: -8px;
+            margin-left: -8px;
+
+            .col-md-4,
+            .col-md-6 {
+                padding-right: 8px;
+                padding-left: 8px;
+            }
+        }
+
+        textarea:disabled,
+        input:disabled {
+            background: #f6f8fa;
+            color: #444;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.booking-modal-container{
+    .booking-modal-content{
+       
+        display: flex;
+        flex-direction: column;
+        .booking-modal-header{
+           border-bottom: 1px solid #ccc;
+            padding: 10px;
+            .right{
+                float:right;
+                cursor: pointer;
+            }
+            .left{
+                font-size: 15px;
+                font-weight: 600;
+                color: #333;
+                
+            }
+        }
+        .booking-modal-body{
+            height: 100%;
+            padding: 15px;
+        }
+        .booking-modal-footer{
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            display: flex;
+            justify-content: flex-end;
+            gap:15px;
+            button{
+                border: none;
+                outline: none;
+                padding-top: 5px 8px;
+                border-radius: 3px;
+
+            }
+            .btn-booking-confirm{
+                background-color: orange;
+            }
+            .btn-booking-cancel{
+                background-color: grey;
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .booking-modal-container {
+        .booking-modal-content {
+            .booking-modal-body {
+                padding: 10px;
+            }
+
+            .booking-modal-footer {
+                gap: 10px;
+                justify-content: center;
+
+                button {
+                    padding: 8px 15px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-modal-container {
+        .booking-modal-content {
+            .booking-modal-header {
+                padding: 8px;
+
+                .left {
+                    font-size: 14px;
+                }
+            }
+
+            .booking-modal-body {
+                padding: 8px;
+            }
+
+            .booking-modal-footer {
+                flex-direction: column;
+                gap: 8px;
+
+                button {
+                    width: 100%;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}

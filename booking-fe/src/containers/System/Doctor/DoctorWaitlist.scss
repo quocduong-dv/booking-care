@@ -1,0 +1,43 @@
+.doctor-waitlist {
+    padding: 20px;
+
+    h2 { color: #1a2236; margin-bottom: 14px; }
+
+    .filter-row { margin-bottom: 12px;
+        select { padding: 6px 10px; border: 1px solid #d7dbe4; border-radius: 6px; }
+    }
+
+    .wl-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+
+        th, td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #eef0f4;
+            text-align: left;
+            font-size: 14px;
+        }
+        th { background: #f7f9fc; color: #5b6474; }
+
+        .wl-status {
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            background: #e0e7ff; color: #4338ca;
+
+            &.notified { background: #fef3c7; color: #b45309; }
+            &.booked { background: #dcfce7; color: #166534; }
+            &.cancelled { background: #fee2e2; color: #991b1b; }
+        }
+    }
+
+    .empty { text-align: center; padding: 40px; color: #9aa0aa; background: #fff; border-radius: 8px; }
+}
+
+@media (max-width: 768px) {
+    .doctor-waitlist .wl-table { display: block; overflow-x: auto; }
+}

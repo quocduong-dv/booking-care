@@ -1,0 +1,14 @@
+export default {
+    api: {
+        // Use relative path so nginx proxy at /api forwards to backend in docker
+        API_BASE_URL: "/",
+        ROUTER_BASE_NAME: null,
+    },
+    app: {
+        /**
+         * The base URL for all locations. If your app is served from a sub-directory on your server, you'll want to set
+         * this to the sub-directory. A properly formatted basename should have a leading slash, but no trailing slash.
+         */
+        ROUTER_BASE_NAME: null,
+    }
+};

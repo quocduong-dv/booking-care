@@ -1,0 +1,19 @@
+{
+  "short_name": "BookingCare",
+  "name": "BookingCare - Dat lich kham benh",
+  "description": "Nen tang dat lich kham benh truc tuyen voi bac si, benh vien uy tin.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "/home",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0d6efd",
+  "background_color": "#ffffff",
+  "lang": "vi"
+}

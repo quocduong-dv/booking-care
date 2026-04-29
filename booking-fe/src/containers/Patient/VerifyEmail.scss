@@ -1,0 +1,101 @@
+.verify-email-container {
+    min-height: calc(100vh - 120px);
+    background: #f4f6fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+
+    .verify-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(16, 24, 40, 0.08);
+        padding: 40px 32px;
+        max-width: 480px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .verify-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        .spinner {
+            width: 44px;
+            height: 44px;
+            border: 4px solid #e5e7eb;
+            border-top-color: #0d6efd;
+            border-radius: 50%;
+            animation: ve-spin 0.9s linear infinite;
+        }
+
+        .loading-text {
+            color: #6b7280;
+            font-size: 15px;
+        }
+    }
+
+    .verify-result {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+
+        .icon {
+            font-size: 64px;
+            line-height: 1;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .body {
+            font-size: 15px;
+            color: #4b5563;
+            line-height: 1.6;
+            max-width: 380px;
+        }
+
+        .home-btn {
+            margin-top: 12px;
+            display: inline-block;
+            padding: 10px 28px;
+            background: #0d6efd;
+            color: #ffffff;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.15s ease;
+
+            &:hover {
+                background: #0b5ed7;
+            }
+        }
+
+        &.is-success .icon { color: #16a34a; }
+        &.is-fail .icon { color: #dc2626; }
+    }
+}
+
+@keyframes ve-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+    .verify-email-container {
+        padding: 20px 12px;
+
+        .verify-card { padding: 28px 20px; }
+        .verify-result {
+            .icon { font-size: 52px; }
+            .title { font-size: 19px; }
+            .body { font-size: 14px; }
+        }
+    }
+}

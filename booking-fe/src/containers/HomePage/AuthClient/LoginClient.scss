@@ -1,0 +1,337 @@
+.login-container-client {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0ebff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    position: relative;
+
+    /* Hiệu ứng các vòng tròn xanh bên phải */
+    .background-decor-client {
+        position: absolute;
+        right: -10%;
+        top: -10%;
+        width: 80%;
+        height: 120%;
+        background: radial-gradient(circle, #0046be 0%, #003399 100%);
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .decor-circle-2-client {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60%;
+        height: 80%;
+        background: #5a94ff;
+        border-radius: 50%;
+        opacity: 0.5;
+        z-index: 1;
+    }
+
+    /* Card Login chính */
+    .login-content-client {
+        width: 850px;
+        min-height: 550px;
+        /* Allow content to expand */
+        display: flex;
+        z-index: 10;
+        background: transparent;
+
+        .login-form-side-client {
+            flex: 1;
+            background-color: #92b9fd;
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            /* Các thành phần trong Form */
+            .login-title-client {
+                color: white;
+                font-size: 32px;
+                font-weight: bold;
+                margin-bottom: 40px;
+            }
+
+            .input-group-client {
+                width: 100%;
+                margin-bottom: 20px;
+
+                input {
+                    width: 100%;
+                    padding: 15px 20px;
+                    border-radius: 8px;
+                    border: none;
+                    background-color: #d1e3ff;
+                    outline: none;
+                    font-size: 16px;
+                    color: #333;
+
+                    &::placeholder {
+                        color: #8faedb;
+                    }
+                }
+            }
+
+            .btn-login-client {
+                width: 100%;
+                padding: 15px;
+                border-radius: 8px;
+                border: none;
+                background-color: #0b46ad;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                cursor: pointer;
+                transition: 0.3s;
+                margin-top: 10px;
+
+                &:hover {
+                    background-color: #083688;
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                }
+            }
+
+            .social-login-text-client {
+                margin: 20px 0;
+                font-weight: 600;
+                font-size: 14px;
+            }
+
+            .social-buttons-client {
+                display: flex;
+                gap: 15px;
+                width: 100%;
+
+                .social-btn-client {
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                    border-radius: 8px;
+                    background: #d1e3ff;
+                    border: none;
+                    cursor: pointer;
+                    font-weight: 500;
+                    color: #4c84ff;
+                    gap: 8px;
+                }
+            }
+
+            /* OTP Form Styles */
+            .otp-instruction-client {
+                font-size: 14px;
+                color: #555;
+                margin-bottom: 20px;
+                text-align: center;
+                line-height: 1.5;
+            }
+
+            .otp-timer-client {
+                margin: 15px 0;
+                font-size: 14px;
+                color: #333;
+                text-align: center;
+
+                b {
+                    color: #d32f2f;
+                }
+
+                .resend-link-client {
+                    color: #0b46ad;
+                    cursor: pointer;
+                    text-decoration: underline;
+                    font-weight: 600;
+
+                    &:hover {
+                        color: #083688;
+                    }
+                }
+            }
+
+            /* Footer Styles */
+            .form-footer-client {
+                width: 100%;
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+
+                .singu-link-client {
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin: 0;
+                    margin-top: 10px;
+
+
+                    span {
+                        color: #e3c05f;
+                        cursor: pointer !important;
+
+
+                        &:hover {
+                            color: #d4a017;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .back-home-client {
+                    font-size: 13px;
+                    color: #555;
+                    cursor: pointer;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    transition: all 0.2s;
+
+                    i {
+                        font-size: 12px;
+                    }
+
+                    &:hover {
+                        color: #0b46ad;
+                        transform: translateX(-3px);
+                    }
+                }
+            }
+        }
+
+        .login-illustration-side-client {
+            flex: 1.2;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* Image 3D Flower */
+            .img-flower-client {
+                width: 110%;
+                z-index: 11;
+                filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2));
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+    .login-container-client {
+        .login-content-client {
+            width: 700px;
+            min-height: 480px;
+
+            .login-form-side-client {
+                padding: 30px;
+
+                .login-title-client {
+                    font-size: 26px;
+                    margin-bottom: 30px;
+                }
+
+                .input-group-client input {
+                    padding: 12px 15px;
+                    font-size: 15px;
+                }
+
+                .btn-login-client {
+                    padding: 12px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container-client {
+        .background-decor-client {
+            display: none;
+        }
+
+        .decor-circle-2-client {
+            display: none;
+        }
+
+        .login-content-client {
+            width: 90%;
+            max-width: 450px;
+            flex-direction: column;
+
+            .login-form-side-client {
+                padding: 30px 25px;
+                border-radius: 20px;
+
+                .login-title-client {
+                    font-size: 24px;
+                    margin-bottom: 25px;
+                }
+
+                .social-buttons-client {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+            }
+
+            .login-illustration-side-client {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container-client {
+        .login-content-client {
+            width: 95%;
+
+            .login-form-side-client {
+                padding: 25px 20px;
+                border-radius: 15px;
+
+                .login-title-client {
+                    font-size: 22px;
+                    margin-bottom: 20px;
+                }
+
+                .input-group-client input {
+                    padding: 12px;
+                    font-size: 14px;
+                }
+
+                .btn-login-client {
+                    padding: 12px;
+                    font-size: 15px;
+                }
+
+                .social-login-text-client {
+                    font-size: 13px;
+                }
+
+                .form-footer-client {
+                    margin-top: 20px;
+
+                    .singu-link-client {
+                        font-size: 13px;
+                    }
+
+                    .back-home-client {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

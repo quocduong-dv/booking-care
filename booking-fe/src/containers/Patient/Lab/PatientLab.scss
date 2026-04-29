@@ -1,0 +1,48 @@
+.patient-lab {
+    padding: 30px 20px;
+    min-height: 60vh;
+
+    h2 { color: #1a2236; margin-bottom: 18px; }
+
+    .lab-list {
+        display: grid;
+        gap: 14px;
+    }
+
+    .lab-card {
+        background: #fff;
+        border-left: 4px solid #4f8cff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        padding: 14px 18px;
+
+        .head {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+
+            strong { color: #1a2236; font-size: 16px; }
+            .date { color: #7a8391; font-size: 13px; margin-left: auto; }
+        }
+
+        .text {
+            white-space: pre-wrap;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .file a {
+            color: #4f8cff;
+            text-decoration: none;
+            font-size: 14px;
+            i { margin-right: 6px; }
+        }
+
+        .notes { font-size: 13px; color: #7a8391; margin-top: 8px; }
+        .doctor { font-size: 12px; color: #5b6474; margin-top: 6px; }
+    }
+
+    .empty, .loading { text-align: center; padding: 40px; color: #9aa0aa; }
+}

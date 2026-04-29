@@ -1,0 +1,78 @@
+.manage-schedule-container {
+    .m-s-title {
+        text-transform: uppercase;
+        margin-top: 15px;
+        font-weight: 600;
+        font-size: 17px;
+        text-align: center;
+        margin-bottom: 30px; // Create more space
+    }
+
+    .pick-hour-container {
+
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+
+        button {
+            padding: 5px 15px;
+            border: 1px solid gray;
+        }
+    }
+
+    .btn-schedule {
+        &.active {
+            background-color: orange;
+
+        }
+    }
+
+    .btn-save-schedule {
+        margin-top: 20px;
+
+
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .manage-schedule-container {
+        .m-s-title {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .pick-hour-container {
+            gap: 10px;
+
+            button {
+                padding: 5px 10px;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .manage-schedule-container {
+        .m-s-title {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .pick-hour-container {
+            gap: 8px;
+
+            button {
+                padding: 4px 8px;
+                font-size: 12px;
+            }
+        }
+
+        .btn-save-schedule {
+            width: 100%;
+        }
+    }
+}

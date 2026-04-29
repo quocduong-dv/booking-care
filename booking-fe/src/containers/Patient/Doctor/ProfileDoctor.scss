@@ -1,0 +1,59 @@
+
+.profile-doctor-container{
+    .intro-doctor{
+      
+        display: flex;
+        .content-left{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .content-right{
+            width: calc(100% - 80px);
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+            .up{
+
+                font-weight: 600;
+
+            }
+            .down{
+                text-align: justify;
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 480px) {
+    .profile-doctor-container {
+        .intro-doctor {
+            flex-direction: column;
+            align-items: center;
+
+            .content-left {
+                width: 70px;
+                height: 70px;
+                margin-bottom: 10px;
+            }
+
+            .content-right {
+                width: 100%;
+                padding-left: 0;
+                text-align: center;
+
+                .up {
+                    font-size: 14px;
+                }
+
+                .down {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,184 @@
+.queue-kiosk {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #0b1e3a 0%, #1a365d 100%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+
+    .kiosk-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+        .clinic {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #4f9dff;
+            i { margin-right: 10px; }
+        }
+        .clock {
+            font-size: 20px;
+            color: #aab7ce;
+        }
+    }
+
+    .kiosk-doctor {
+        text-align: center;
+        padding: 14px;
+        background: rgba(255, 255, 255, 0.05);
+
+        .label {
+            font-size: 14px;
+            letter-spacing: 4px;
+            color: #aab7ce;
+            margin-right: 12px;
+        }
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+        }
+    }
+
+    .kiosk-main {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 24px;
+        padding: 40px;
+    }
+
+    .current-panel {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 3px solid #4f9dff;
+        box-shadow: 0 0 60px rgba(79, 157, 255, 0.3);
+
+        .label {
+            font-size: 22px;
+            letter-spacing: 6px;
+            color: #aab7ce;
+            margin-bottom: 20px;
+        }
+        .big-number {
+            font-size: 280px;
+            font-weight: 900;
+            line-height: 1;
+            color: #fff;
+            text-shadow: 0 0 40px rgba(79, 157, 255, 0.6);
+            animation: pulse 2s ease-in-out infinite;
+
+            &.idle {
+                color: #555;
+                text-shadow: none;
+                animation: none;
+            }
+        }
+        .current-name {
+            font-size: 36px;
+            font-weight: 600;
+            color: #c7d1e2;
+            margin-top: 20px;
+        }
+    }
+
+    .waiting-panel {
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 24px;
+        padding: 30px;
+
+        .label {
+            font-size: 18px;
+            letter-spacing: 4px;
+            color: #aab7ce;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .waiting-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                padding: 14px 18px;
+                background: rgba(255, 255, 255, 0.06);
+                border-radius: 12px;
+                margin-bottom: 10px;
+                font-size: 22px;
+
+                .n {
+                    min-width: 60px;
+                    font-weight: 800;
+                    color: #4f9dff;
+                    font-size: 28px;
+                }
+                .p { color: #c7d1e2; }
+            }
+        }
+        .no-waiting {
+            text-align: center;
+            padding: 40px;
+            color: #7b8aa7;
+            font-size: 20px;
+        }
+        .waiting-meta {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #aab7ce;
+            font-size: 16px;
+            b { color: #fff; }
+        }
+    }
+
+    .kiosk-footer {
+        padding: 16px;
+        text-align: center;
+        color: #7b8aa7;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 14px;
+    }
+
+    .kiosk-loading, .kiosk-empty {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: #aab7ce;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+
+@media (max-width: 900px) {
+    .queue-kiosk {
+        .kiosk-main {
+            grid-template-columns: 1fr;
+            padding: 20px;
+            gap: 16px;
+        }
+        .current-panel .big-number { font-size: 160px; }
+        .current-panel .current-name { font-size: 22px; }
+    }
+}

@@ -1,0 +1,134 @@
+.login-background {
+    background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+
+    .login-container {
+        max-width: 400px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        padding: 12px;
+
+        .login-content {
+            padding: 10px;
+
+            .text-login {
+                text-align: center;
+                font-weight: 600;
+                font-size: 24px;
+                padding-top: 10px;
+            }
+
+            .login-input {
+                margin: 7px 0;
+
+                .custom-input-password {
+                    position: relative;
+
+                    i {
+                        position: absolute;
+                        right: 8px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .btn-login {
+                width: 100%;
+                margin: 12px 0;
+                height: 38px;
+                border-radius: 19px;
+                outline: none;
+                border: none;
+                color: white;
+                cursor: pointer;
+                font-weight: 600;
+                background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+            }
+
+            .forgot-password {
+                font-size: 12px;
+            }
+
+            .social-login {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                margin-top: 10px;
+
+                .google,
+                .facebook {
+                    font-size: 30px;
+                    border-radius: 50%;
+                    height: 50px;
+                    width: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                }
+
+                .google {
+                    background-color: rgb(155, 48, 48);
+                    margin-right: 10px;
+                }
+
+                .facebook {
+                    background-color: rgb(9, 94, 154);
+                }
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 480px) {
+    .login-background {
+        padding: 16px 12px;
+
+        .login-container {
+            border-radius: 8px;
+
+            .login-content {
+                padding: 6px;
+
+                .text-login {
+                    font-size: 20px;
+                }
+
+                .btn-login {
+                    height: 42px;
+                    font-size: 15px;
+                }
+
+                .social-login {
+                    .google,
+                    .facebook {
+                        height: 44px;
+                        width: 44px;
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .login-background {
+        .login-container {
+            .login-content {
+                .text-login {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

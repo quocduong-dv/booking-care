@@ -1,0 +1,85 @@
+@import "../../styles/common.scss";
+
+.header-container {
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    background-color: $colormain;
+    color: $common-text-color;
+    height: 40px;
+    position: relative;
+
+    .btn-logout {
+        color: $common-text-color;
+        line-height: 40px;
+        height: 40px;
+        padding: 0 10px;
+        &:hover {
+            background-color: darken($colormain, 5);
+        }
+        i {
+            font-size: $base-size + 1px;
+        }
+    }
+    .languages{
+        .welcome{
+            margin-right: 10px;
+        }
+        .languages-en{
+            margin-left: 10px;
+            margin-right: 15px;
+            cursor: pointer;
+            &.active{
+                opacity: 1;
+                color: #30d663;
+            }
+        }
+        .languages-vi{
+            cursor: pointer;
+
+            &.active{
+                opacity: 1;
+                color: orange;
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .header-container {
+        height: 35px;
+        font-size: 12px;
+
+        .btn-logout {
+            line-height: 35px;
+            height: 35px;
+            padding: 0 8px;
+
+            i {
+                font-size: 14px;
+            }
+        }
+
+        .languages {
+            .welcome {
+                display: none;
+            }
+
+            .languages-en {
+                margin-left: 5px;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        font-size: 11px;
+
+        .btn-logout {
+            padding: 0 5px;
+        }
+    }
+}

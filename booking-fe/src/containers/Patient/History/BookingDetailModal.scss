@@ -1,0 +1,22 @@
+.booking-detail {
+    h5 {
+        color: #2d7ff9;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 6px;
+    }
+
+    .row-detail {
+        display: flex;
+        padding: 6px 0;
+
+        .label {
+            width: 180px;
+            color: #777;
+        }
+        .value {
+            flex: 1;
+            color: #222;
+        }
+    }
+}

@@ -1,0 +1,161 @@
+.notif-bell-wrapper {
+    position: relative;
+    display: inline-block;
+
+    .bell-btn {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #555;
+        transition: background 0.15s;
+
+        i { font-size: 18px; }
+        &:hover { background: rgba(0, 0, 0, 0.05); }
+
+        .badge {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            min-width: 18px;
+            height: 18px;
+            padding: 0 5px;
+            background: #ef4444;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &.dark .bell-btn {
+        color: #fff;
+        &:hover { background: rgba(255, 255, 255, 0.12); }
+    }
+
+    .notif-dropdown {
+        position: absolute;
+        top: 48px;
+        right: 0;
+        width: 360px;
+        max-height: 460px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        z-index: 1100;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        .notif-dropdown-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 14px;
+            border-bottom: 1px solid #eee;
+            background: #f8fafc;
+
+            strong { color: #1f2937; font-size: 14px; }
+
+            .btn-link {
+                background: none;
+                border: none;
+                color: #2563eb;
+                font-size: 12px;
+                cursor: pointer;
+                padding: 4px 6px;
+                &:hover { text-decoration: underline; }
+            }
+        }
+
+        .notif-dropdown-list {
+            overflow-y: auto;
+            max-height: 400px;
+
+            .empty {
+                padding: 20px;
+                text-align: center;
+                color: #888;
+                font-size: 13px;
+            }
+
+            .notif-item {
+                display: flex;
+                gap: 10px;
+                padding: 10px 14px;
+                border-bottom: 1px solid #f0f2f5;
+                cursor: pointer;
+                transition: background 0.1s;
+                position: relative;
+
+                &:hover { background: #f9fafb; }
+                &.unread { background: #eff6ff; }
+                &.unread:hover { background: #dbeafe; }
+
+                .icon {
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 50%;
+                    background: #dbeafe;
+                    color: #2563eb;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    font-size: 14px;
+                }
+
+                .body {
+                    flex: 1;
+                    min-width: 0;
+
+                    .title {
+                        font-weight: 600;
+                        font-size: 13px;
+                        color: #1f2937;
+                        margin-bottom: 2px;
+                    }
+                    .msg {
+                        font-size: 12px;
+                        color: #555;
+                        line-height: 1.35;
+                        word-wrap: break-word;
+                    }
+                    .time {
+                        font-size: 11px;
+                        color: #9ca3af;
+                        margin-top: 4px;
+                    }
+                }
+
+                .btn-del {
+                    background: none;
+                    border: none;
+                    color: #9ca3af;
+                    cursor: pointer;
+                    padding: 4px 6px;
+                    font-size: 11px;
+                    opacity: 0;
+                    transition: opacity 0.1s;
+                    align-self: flex-start;
+                    &:hover { color: #ef4444; }
+                }
+                &:hover .btn-del { opacity: 1; }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .notif-bell-wrapper .notif-dropdown {
+        width: 300px;
+        right: -60px;
+    }
+}

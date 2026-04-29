@@ -1,0 +1,9 @@
+.service-package-list {
+    .pkg-card {
+        &:hover,
+        &:focus-visible {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+            outline: none;
+        }
+    }
+}

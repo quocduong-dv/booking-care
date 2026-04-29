@@ -1,0 +1,205 @@
+.manage-specialty-container {
+    padding: 20px;
+
+    .ms-title {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #333;
+    }
+
+    .edit-specialty-form {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #dee2e6;
+
+        .edit-form-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #495057;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .mt-2 {
+            margin-top: 10px;
+        }
+
+        .mr-2 {
+            margin-right: 10px;
+        }
+    }
+
+    #TableManageSpecialty {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+
+        td,
+        th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: #04AA6D;
+            color: white;
+            text-align: center;
+        }
+
+        .btn-edit {
+            background: transparent;
+            border: none;
+            color: #ffc107;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0 10px;
+
+            &:hover {
+                color: #e0a800;
+            }
+        }
+
+        .btn-delete {
+            background: transparent;
+            border: none;
+            color: #dc3545;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0 10px;
+
+            &:hover {
+                color: #c82333;
+            }
+        }
+    }
+
+    .specialty-pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 5px;
+
+        button {
+            padding: 6px 12px;
+            border: 1px solid #dee2e6;
+            background: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+
+            &:hover {
+                background: #e9ecef;
+            }
+
+            &.active {
+                background: #04AA6D;
+                color: white;
+                border-color: #04AA6D;
+            }
+
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+    .manage-specialty-container {
+        padding: 15px;
+
+        .ms-title {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .manage-specialty-container {
+        padding: 10px;
+
+        .ms-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .edit-specialty-form {
+            padding: 15px;
+
+            .edit-form-title {
+                font-size: 16px;
+            }
+        }
+
+        #TableManageSpecialty {
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+
+            td, th {
+                padding: 6px;
+                font-size: 13px;
+                white-space: nowrap;
+            }
+        }
+
+        .specialty-pagination {
+            flex-wrap: wrap;
+
+            button {
+                padding: 4px 10px;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .manage-specialty-container {
+        padding: 5px;
+
+        .ms-title {
+            font-size: 16px;
+        }
+
+        .edit-specialty-form {
+            padding: 10px;
+
+            .edit-form-title {
+                font-size: 14px;
+            }
+        }
+
+        #TableManageSpecialty {
+            td, th {
+                padding: 4px;
+                font-size: 12px;
+            }
+
+            .btn-edit, .btn-delete {
+                font-size: 16px;
+                padding: 0 5px;
+            }
+        }
+    }
+}

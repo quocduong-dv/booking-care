@@ -1,0 +1,37 @@
+.create-appt-form {
+    .form-group {
+        margin-bottom: 14px;
+
+        label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 4px;
+            display: block;
+        }
+        .form-control {
+            border-radius: 6px;
+            border: 1px solid #d9dde5;
+            padding: 8px 12px;
+            font-size: 14px;
+            &:focus {
+                outline: none;
+                border-color: #4f8cff;
+                box-shadow: 0 0 0 3px rgba(79, 140, 255, 0.12);
+            }
+        }
+        textarea.form-control { resize: vertical; }
+    }
+
+    .info-note {
+        background: #f1f8ff;
+        border: 1px solid #cfe4ff;
+        color: #0b5ed7;
+        border-radius: 6px;
+        padding: 10px 14px;
+        font-size: 13px;
+        margin-top: 8px;
+
+        i { margin-right: 6px; }
+    }
+}

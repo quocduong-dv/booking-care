@@ -1,0 +1,256 @@
+// Cai thien responsive cho nhieu trang cung luc
+
+@media (max-width: 768px) {
+    .home-header-container {
+        padding: 0 12px !important;
+
+        .home-header-content {
+            flex-wrap: wrap;
+
+            .left-content { width: auto !important; }
+            .center-content {
+                display: none !important;
+            }
+            .right-content {
+                flex: 1;
+                justify-content: flex-end;
+                gap: 8px;
+
+                .support { display: none !important; }
+                .language-vi, .language-en { font-size: 12px !important; }
+            }
+        }
+    }
+
+    .home-header-banner {
+        .content-up {
+            padding: 20px 12px !important;
+            .title1 { font-size: 22px !important; }
+            .title2 { font-size: 18px !important; }
+        }
+        .content-down {
+            .options {
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 10px !important;
+
+                .option-child {
+                    width: 30% !important;
+                    min-width: 100px !important;
+                }
+            }
+        }
+    }
+
+    .patient-history-container {
+        padding: 12px !important;
+
+        h2 { font-size: 18px !important; }
+        .history-table {
+            font-size: 12px;
+            th, td { padding: 6px !important; white-space: nowrap; }
+        }
+    }
+
+    .doctor-revenue-container {
+        .dr-filter {
+            .col-3, .col-2 {
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+                margin-bottom: 8px;
+            }
+        }
+        .dr-summary {
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+    .dashboard-container {
+        padding: 12px !important;
+        .stat-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+        .dashboard-header {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 10px !important;
+
+            .title { font-size: 22px !important; }
+        }
+    }
+
+    .doctor-container,
+    .detail-doctor-page,
+    .doctor-schedule-container {
+        padding: 10px !important;
+    }
+
+    .manage-appointment-container,
+    .manage-medicine-container {
+        padding: 10px !important;
+
+        .ma-filter, .mm-header {
+            .col-3, .col-2 {
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    .notif-bell-wrapper .notif-dropdown {
+        width: calc(100vw - 32px) !important;
+        right: -60px !important;
+        max-width: 340px !important;
+    }
+
+    // ChatBox — shorter height, smaller bubbles
+    .chatbox {
+        height: 420px !important;
+
+        .chatbox-header { padding: 8px 10px !important; font-size: 14px !important; }
+        .chatbox-body {
+            padding: 8px !important;
+            .msg .bubble { max-width: 85% !important; padding: 6px 10px !important; font-size: 13px !important; }
+        }
+        .chatbox-input {
+            padding: 8px !important;
+            gap: 6px !important;
+            textarea { font-size: 13px !important; }
+            button { min-width: 56px !important; padding: 6px 8px !important; font-size: 13px !important; }
+        }
+    }
+
+    // Doctor QueuePanel — stack controls, shrink hero number, scroll table
+    .queue-panel-container {
+        padding: 12px !important;
+
+        h2 { font-size: 18px !important; }
+        .controls {
+            flex-direction: column !important;
+            align-items: stretch !important;
+
+            .date-picker { min-width: 0 !important; width: 100% !important; }
+            button { width: 100% !important; }
+        }
+        .current-display {
+            padding: 20px 12px !important;
+            .number { font-size: 56px !important; }
+        }
+        .queue-table {
+            overflow-x: auto !important;
+            table { min-width: 540px !important; font-size: 12px !important; }
+        }
+    }
+
+    // Patient queue status — smaller number before 768
+    .patient-queue-page {
+        padding: 12px !important;
+        .queue-card {
+            padding: 24px 16px !important;
+            h2 { font-size: 18px !important; }
+            .state-block {
+                padding: 22px 12px !important;
+                .big-number { font-size: 64px !important; }
+                &.done .big-number { font-size: 56px !important; }
+            }
+        }
+    }
+
+    // BookingModal — full-width reactstrap modal on mobile
+    .booking-modal-container.modal-dialog,
+    .modal-dialog.booking-modal-container {
+        max-width: 100% !important;
+        width: calc(100% - 16px) !important;
+        margin: 8px auto !important;
+    }
+
+    // ManageDoctor — stack markdown editor columns on tablet/mobile
+    .manage-doctor-container {
+        padding: 10px !important;
+
+        .more-infor {
+            flex-direction: column !important;
+            gap: 10px !important;
+
+            .content-left,
+            .content-right { width: 100% !important; }
+        }
+
+        .rc-md-editor {
+            min-height: 300px !important;
+            .rc-md-navigation { flex-wrap: wrap !important; }
+            .editor-container {
+                flex-direction: column !important;
+                .section-container { width: 100% !important; }
+            }
+        }
+    }
+
+    // DetailSpecialty — remove side padding, stack doctor card
+    .detail-specialty-container {
+        .detail-specialty-body { padding: 0 12px !important; }
+        .each-doctor {
+            flex-direction: column !important;
+            min-height: auto !important;
+
+            .dt-content-left,
+            .dt-content-right { width: 100% !important; border-right: 0 !important; }
+            .dt-content-right { margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee; }
+        }
+    }
+
+    // Manage Audit — stack filters
+    .manage-audit {
+        padding: 12px !important;
+
+        .ma-filter {
+            flex-direction: column !important;
+            align-items: stretch !important;
+            gap: 10px !important;
+
+            .fg { min-width: 0 !important; width: 100%; }
+            .fg.actions .btn { flex: 1; }
+        }
+        .ma-table {
+            overflow-x: auto !important;
+            table { min-width: 900px !important; font-size: 11px !important; }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .home-header-banner .content-down .options .option-child {
+        width: 45% !important;
+    }
+
+    .dashboard-container .stat-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .patient-history-container .table-wrap {
+        overflow-x: auto;
+
+        .history-table {
+            min-width: 600px;
+        }
+    }
+
+    .emr-modal .modal-dialog,
+    .mm-modal {
+        max-width: 95% !important;
+        margin: 10px auto !important;
+    }
+
+    .chatbox {
+        height: 360px !important;
+        .chatbox-input button { min-width: 44px !important; }
+    }
+
+    .queue-panel-container .current-display .number { font-size: 44px !important; }
+    .patient-queue-page .queue-card .state-block .big-number { font-size: 52px !important; }
+
+    .booking-modal-container .booking-modal-content .booking-modal-body { padding: 6px !important; }
+
+    .manage-audit .ma-table table { min-width: 720px !important; font-size: 10.5px !important; }
+}

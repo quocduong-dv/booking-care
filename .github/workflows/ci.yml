@@ -1,0 +1,95 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  backend-build:
+    name: Backend build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: booking-be
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: booking-be/package-lock.json
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Babel build
+        run: npm run build-src
+
+      - name: Syntax-check migrations
+        run: |
+          for f in src/migrations/*.js; do
+            node --check "$f"
+          done
+
+  frontend-build:
+    name: Frontend build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: booking-fe
+    env:
+      CI: false
+      REACT_APP_BACKEND_URL: http://localhost:8080
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: booking-fe/package-lock.json
+
+      - name: Install deps
+        run: npm ci --legacy-peer-deps
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-build
+          path: booking-fe/build
+          retention-days: 7
+
+  docker-build:
+    name: Docker images (build only)
+    runs-on: ubuntu-latest
+    needs: [backend-build, frontend-build]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build backend image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./booking-be
+          file: ./booking-be/Dockerfile
+          push: false
+          tags: bookingcare-backend:${{ github.sha }}
+
+      - name: Build frontend nginx image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./docker/frontend-nginx
+          file: ./docker/frontend-nginx/Dockerfile
+          push: false
+          tags: bookingcare-frontend:${{ github.sha }}

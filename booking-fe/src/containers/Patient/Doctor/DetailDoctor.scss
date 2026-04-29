@@ -1,0 +1,205 @@
+.doctor-detail-container{
+    height:500px;
+   
+    .intro-doctor{
+        margin: 0 100px;
+        display: flex;
+        .content-left{
+            width: 20%;
+            
+        //    background: center center no-repeat;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 10px 20px;
+        }
+        .content-right{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+            .up{
+                font-size: 20px;
+                font-weight: 600;
+                padding-top: 15px;
+            }
+            .down{
+                padding-top: 10px;
+                .like-share-plugin{
+                    margin: 10px 0 20px 0;
+                }
+            }
+        }
+    }
+    .schedule-doctor{
+        margin: 0 100px;
+        display: flex;
+        padding: 10px 0;
+        min-height: 200px;
+        .content-left{
+            width: 50%;
+        }
+        .content-right{
+            width: 50%;
+        }
+    }
+    .detail-infro-doctor{
+
+       border: 1px solid #ddd;
+       border-bottom: 1px solid #ddd;
+        background-color: #f9f9f9 ;
+        padding: 10px 100px;
+        h1,h2
+        h3{
+            font-size: 17px;
+
+        }
+        img{
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+    .comment-doctor{
+        padding: 10px 100px;
+    }
+}
+
+// Responsive Design
+@media (max-width: 1200px) {
+    .doctor-detail-container {
+        .intro-doctor {
+            margin: 0 60px;
+        }
+        .schedule-doctor {
+            margin: 0 60px;
+        }
+        .detail-infro-doctor {
+            padding: 10px 60px;
+        }
+        .comment-doctor {
+            padding: 10px 60px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .doctor-detail-container {
+        .intro-doctor {
+            margin: 0 40px;
+        }
+        .schedule-doctor {
+            margin: 0 40px;
+        }
+        .detail-infro-doctor {
+            padding: 10px 40px;
+        }
+        .comment-doctor {
+            padding: 10px 40px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .doctor-detail-container {
+        height: auto;
+
+        .intro-doctor {
+            margin: 0 20px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .content-left {
+                width: 100px;
+                height: 100px;
+                margin: 10px auto;
+            }
+
+            .content-right {
+                width: 100%;
+                padding-left: 0;
+
+                .up {
+                    font-size: 18px;
+                    text-align: center;
+                }
+
+                .down {
+                    .like-share-plugin {
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+
+        .schedule-doctor {
+            margin: 0 20px;
+            flex-direction: column;
+
+            .content-left {
+                width: 100%;
+            }
+
+            .content-right {
+                width: 100%;
+                margin-top: 15px;
+            }
+        }
+
+        .detail-infro-doctor {
+            padding: 10px 20px;
+
+            h1, h2, h3 {
+                font-size: 15px;
+            }
+        }
+
+        .comment-doctor {
+            padding: 10px 20px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .doctor-detail-container {
+        .intro-doctor {
+            margin: 0 10px;
+
+            .content-left {
+                width: 80px;
+                height: 80px;
+            }
+
+            .content-right {
+                .up {
+                    font-size: 16px;
+                    padding-top: 10px;
+                }
+
+                .down {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .schedule-doctor {
+            margin: 0 10px;
+            padding: 5px 0;
+        }
+
+        .detail-infro-doctor {
+            padding: 10px 10px;
+
+            h1, h2, h3 {
+                font-size: 14px;
+            }
+        }
+
+        .comment-doctor {
+            padding: 10px 10px;
+        }
+    }
+}

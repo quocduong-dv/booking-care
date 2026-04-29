@@ -1,0 +1,56 @@
+.patient-waitlist {
+    padding: 30px 20px;
+    min-height: 60vh;
+
+    h2 { color: #1a2236; margin-bottom: 18px; }
+
+    .wl-list {
+        display: grid;
+        gap: 12px;
+    }
+
+    .wl-card {
+        background: #fff;
+        border-left: 4px solid #4f8cff;
+        border-radius: 8px;
+        padding: 14px 18px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+
+            strong { color: #1a2236; }
+            .badge {
+                padding: 3px 10px;
+                border-radius: 12px;
+                font-size: 12px;
+                font-weight: 600;
+                background: #e0e7ff; color: #4338ca;
+
+                &.notified { background: #fef3c7; color: #b45309; }
+                &.booked { background: #dcfce7; color: #166534; }
+                &.cancelled { background: #fee2e2; color: #991b1b; }
+            }
+        }
+
+        .details {
+            font-size: 14px;
+            color: #5b6474;
+            line-height: 1.8;
+
+            .notified { color: #b45309; font-weight: 600; }
+        }
+
+        .actions {
+            margin-top: 10px;
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+        }
+    }
+
+    .empty, .loading { text-align: center; padding: 40px; color: #9aa0aa; }
+}

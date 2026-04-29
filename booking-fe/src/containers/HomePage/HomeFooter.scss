@@ -1,0 +1,437 @@
+.home-footer{
+  background-color:#efefef ;
+   .left-footer{
+  //   margin-left: 3%; 
+    // Định nghĩa mixin
+    @mixin padding-left($value) {
+        padding-left: $value;
+    }
+
+.home-icon-footer {
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 10px;
+    @include padding-left(25%); // Sử dụng mixin
+    .header-logo-1{
+      margin-right: 10px; /* Khoảng cách giữa các hình ảnh */
+      width: 30%;  /* Điều chỉnh chiều rộng của ảnh SVG */
+      height: auto;
+     
+
+    }
+  
+    .icon-footer {
+      font-size: 13px; // Adjust icon size as needed
+      margin-right: 10px; // Adjust spacing between icon and text
+      color: #333; // Adjust icon color
+    }
+  
+    .text-footer {
+      font-size: 13px; // Adjust font size for smaller text
+      color: #666; // Adjust text color
+      line-height: 1.5; // Adjust line spacing
+      text-align: center; /* Căn giữa toàn bộ đoạn văn bản */
+      white-space: nowrap; /* Ngăn không cho các từ tự động xuống dòng */
+      word-break: break-all; /* Cho phép các từ dài bị ngắt */
+    }
+   
+  }
+  .home-left-footer {
+    padding: 10px;
+    font-weight: 600;
+  }
+  .bottom-left-footer{
+    margin-right: calc(50px + 20px) !important;  // Kết hợp các giá trị để tạo ra khoảng cách\
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 4px;
+}
+}
+.header-logo{
+      width: 40%;
+      display: flex;
+      align-items: center !important;
+      cursor: pointer;
+      transform: scale(0.5, 0.5);
+      margin-left: 50px;
+  //    margin-bottom:10px;
+      margin-top: -25px;
+      filter: brightness(1.2);
+    
+    
+}
+.center-footer{
+  text-align: left;
+  cursor: pointer;
+   margin-left: 90px;
+   margin-bottom:11px ;
+  //padding-bottom: 10px;
+  color:#51c6d4 !important;
+}
+.right-footer-cnt{
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.right-footer-cnt {
+  margin-bottom: 10px; /* Thêm khoảng cách dưới dòng chữ "Đối tác bảo trợ nội dung" */
+}
+
+.sponsor-container {
+  display: flex;
+  align-items: center; /* Căn giữa hình ảnh và văn bản theo chiều dọc */
+  padding: 10px 0;
+
+.bg-image{
+  width: 64px;
+  height: 32px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 20px; /* Khoảng cách giữa hình ảnh và văn bản */
+}
+.right-footer-1 {
+  background-image: url('../../assets/hellodoctor.png');
+  
+}
+.right-footer-2{
+  background-image: url('../../assets/bernard.png');
+  height: 45px !important;
+}
+.right-footer-3{
+  background-image: url('../../assets/doctorcheck.png');
+  height: 45px !important;
+  
+}
+
+.sponsor-text h5{
+  font-weight: 600;
+  margin: 0; /* Xóa margin mặc định */
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333; /* Màu chữ đậm hơn */
+    line-height: 1.2; /* Khoảng cách giữa các dòng chữ */
+} 
+ 
+.sponsor-text p {
+  margin: 0; /* Xóa margin mặc định */
+  display: flex;
+  align-items: center;
+  padding: 2px 0;
+  font-size: 12px;
+  color: #666; /* Màu chữ nhạt hơn để tương phản với tiêu đề */
+  line-height: 1.5; /* Khoảng cách giữa các dòng chữ */
+  
+  
+}
+
+}
+.border-footer{
+  border-top-width: 1px !important;
+  border-top-color: grey !important;
+  border-style: solid; /* Cần có border-style để đường viền hiển thị */
+  width: 90% !important; /* Đặt độ rộng cụ thể cho phần tử */
+  margin: 0 auto; /* Trung tâm hóa phần tử trong container */
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  
+  }
+  .phone-icon{
+    padding-top: 10px;
+    padding-bottom: 25px;
+  }
+  .text-br-footer{
+    text-align: left;
+
+    .sp-text{
+      margin: 0 5px;
+      
+    }
+  }
+ 
+ 
+}
+.end-footer-end{
+  padding: 10px 0;
+  background-color: #64b9e5;
+  height: 100px;
+  .text-end-ft{
+    text-align: left;
+    color: white;
+    font-weight: 550;
+
+  }
+ }
+
+// Responsive Design
+@media (max-width: 1200px) {
+    .home-footer {
+        .left-footer {
+            .home-icon-footer {
+                padding-left: 15% !important;
+            }
+        }
+
+        .header-logo {
+            margin-left: 30px;
+        }
+
+        .center-footer {
+            margin-left: 50px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .home-footer {
+        .left-footer {
+            .home-icon-footer {
+                padding-left: 10% !important;
+
+                .header-logo-1 {
+                    width: 35%;
+                }
+            }
+        }
+
+        .header-logo {
+            width: 45%;
+            margin-left: 30px;
+        }
+
+        .center-footer {
+            margin-left: 35px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home-footer {
+        padding-top: 15px;
+
+        .left-footer {
+            .home-icon-footer {
+                padding-left: 5% !important;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 15px;
+
+                .icon-footer {
+                    margin-bottom: 5px;
+                }
+
+                .text-footer {
+                    text-align: left;
+                    white-space: normal;
+                    word-break: break-word;
+                    font-size: 12px;
+                    line-height: 1.6;
+                }
+
+                .header-logo-1 {
+                    width: 40%;
+                    margin-right: 15px;
+                }
+            }
+
+            .home-left-footer {
+                padding: 10px 5%;
+                font-size: 14px;
+            }
+
+            .bottom-left-footer {
+                margin-right: 0 !important;
+                padding: 10px 5%;
+                font-size: 13px;
+            }
+        }
+
+        .header-logo {
+            width: 50%;
+            margin-left: 25px;
+            transform: scale(0.6, 0.6);
+            margin-top: -15px;
+        }
+
+        .center-footer {
+            margin-left: 25px !important;
+            margin-bottom: 15px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .right-footer-cnt {
+            padding: 10px 0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .sponsor-container {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15px 0;
+
+            .bg-image {
+                width: 80px;
+                height: 40px;
+                margin-bottom: 10px;
+                margin-right: 0;
+
+                &.right-footer-2,
+                &.right-footer-3 {
+                    height: 50px !important;
+                }
+            }
+
+            .sponsor-text {
+                h5 {
+                    font-size: 13px;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    font-size: 11px;
+                    line-height: 1.4;
+                }
+            }
+        }
+
+        .border-footer {
+            width: 95% !important;
+            margin: 20px auto;
+
+            .text-br-footer {
+                font-size: 12px;
+                padding: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                .phone-icon {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    margin-right: 5px;
+                }
+
+                .sp-text {
+                    margin: 5px 0;
+                    width: 100%;
+                }
+
+                span {
+                    margin: 2px;
+                }
+            }
+        }
+
+        .end-footer-end {
+            height: auto;
+            min-height: 60px;
+            padding: 15px 10px;
+
+            .text-end-ft {
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .home-footer {
+        padding-top: 10px;
+
+        .left-footer {
+            .home-icon-footer {
+                padding-left: 3% !important;
+                margin-bottom: 12px;
+
+                .text-footer {
+                    font-size: 11px;
+                }
+
+                .header-logo-1 {
+                    width: 45%;
+                }
+            }
+
+            .home-left-footer {
+                padding: 8px 3%;
+                font-size: 13px;
+            }
+
+            .bottom-left-footer {
+                padding: 8px 3%;
+                font-size: 12px;
+            }
+        }
+
+        .header-logo {
+            width: 60%;
+            margin-left: 15px;
+            transform: scale(0.5, 0.5);
+            margin-top: -10px;
+        }
+
+        .center-footer {
+            margin-left: 15px !important;
+            margin-bottom: 12px;
+            font-size: 12px;
+        }
+
+        .right-footer-cnt {
+            font-size: 13px;
+        }
+
+        .sponsor-container {
+            padding: 12px 0;
+
+            .bg-image {
+                width: 70px;
+                height: 35px;
+
+                &.right-footer-2,
+                &.right-footer-3 {
+                    height: 45px !important;
+                }
+            }
+
+            .sponsor-text {
+                h5 {
+                    font-size: 12px;
+                }
+
+                p {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .border-footer {
+            width: 98% !important;
+
+            .text-br-footer {
+                font-size: 11px;
+                padding: 8px 5px;
+
+                .sp-text {
+                    display: block;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+
+        .end-footer-end {
+            padding: 12px 8px;
+            min-height: 50px;
+
+            .text-end-ft {
+                font-size: 12px;
+            }
+        }
+    }
+}

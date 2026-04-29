@@ -1,0 +1,9 @@
+.handbook-child{
+    cursor: pointer;
+    .handbook-name{
+        padding: 10px 0;
+        &:hover{
+            color: rgb(66, 165, 215);
+        }
+    }
+}

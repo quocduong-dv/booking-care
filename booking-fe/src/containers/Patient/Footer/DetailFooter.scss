@@ -1,0 +1,75 @@
+.detail-privacy-policy-container {
+    .detail-privacy-policy-body {
+        .content-title {
+            margin: 0 auto;
+            max-width: 1000px;
+            width: 100%;
+            padding: 0 15px;
+
+            .baiviet-ten{
+                padding-top: 15px;
+            padding-bottom: 10px;
+                }
+
+            }
+            .baiviet-noidung {
+                &.py-2 {
+                padding: 50px 50px;
+                background: #fcfaf6;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                font-size: 16px;
+                max-width: 1000px;
+                width: 100%;
+                margin: 0 auto;
+                line-height: 1.6;
+                text-align: justify;
+
+
+
+        }
+    }
+}
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+    .detail-privacy-policy-container {
+        .detail-privacy-policy-body {
+            .baiviet-noidung {
+                &.py-2 {
+                    padding: 30px 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-privacy-policy-container {
+        .detail-privacy-policy-body {
+            .baiviet-noidung {
+                &.py-2 {
+                    padding: 20px 15px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-privacy-policy-container {
+        .detail-privacy-policy-body {
+            .content-title {
+                padding: 0 10px;
+            }
+
+            .baiviet-noidung {
+                &.py-2 {
+                    padding: 15px 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

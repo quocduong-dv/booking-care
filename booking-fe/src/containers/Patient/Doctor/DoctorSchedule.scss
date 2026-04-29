@@ -1,0 +1,127 @@
+.doctor-schedule-container{
+    border-right: 1px solid #ddd;
+    height: 100%;
+    .all-schedule{
+           select{
+            border: none;
+            border-bottom: 1px solid #ddd;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 0;
+            color: #15717f;
+            font-weight: 600;
+           option{
+            cursor: pointer;
+           }
+           }
+    }
+    .all-available-time{
+        .text-calendar{
+            margin: 10px 0;
+            color: #333;
+         span{
+                text-transform: uppercase;
+                margin-left: 5px;
+            }
+        }
+        .time-content{
+           
+            .time-content-btns{
+                display: flex;
+                gap:15px;
+                flex-wrap: wrap;
+            
+            button{
+                padding: 8px 10px;
+                border: none;
+                outline: none;
+                background-color: grey;
+                min-width: 120px;
+                background-color: #fff04b;
+                border-radius: 3px;
+                font-weight: 600;
+                color: #333;
+                &:hover{
+                    background-color:#45c3d2 ;
+                    color: white;
+                }
+            }
+            .btn-vie{
+                min-width: 120px;
+            }
+            .btn-en{
+                min-width: 170px;
+            }
+            .no-schedule{
+                font-style:italic ;
+                font-size: 14px;
+            }
+        }
+        .book-free{
+            margin-top: 10px;
+        }
+    }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .doctor-schedule-container {
+        border-right: none;
+
+        .all-schedule {
+            select {
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+
+        .all-available-time {
+            .time-content {
+                .time-content-btns {
+                    gap: 10px;
+
+                    button {
+                        min-width: 100px;
+                        padding: 7px 8px;
+                        font-size: 13px;
+                    }
+
+                    .btn-en {
+                        min-width: 140px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .doctor-schedule-container {
+        .all-available-time {
+            .text-calendar {
+                font-size: 13px;
+            }
+
+            .time-content {
+                .time-content-btns {
+                    gap: 8px;
+
+                    button {
+                        min-width: 80px;
+                        padding: 6px;
+                        font-size: 12px;
+                    }
+
+                    .btn-vie {
+                        min-width: 80px;
+                    }
+
+                    .btn-en {
+                        min-width: 110px;
+                    }
+                }
+            }
+        }
+    }
+}

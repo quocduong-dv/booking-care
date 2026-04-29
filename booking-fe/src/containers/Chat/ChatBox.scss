@@ -1,0 +1,77 @@
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    height: 480px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+
+    .chatbox-header {
+        padding: 10px 14px;
+        background: #2d7ff9;
+        color: #fff;
+    }
+
+    .chatbox-body {
+        flex: 1;
+        overflow-y: auto;
+        padding: 12px;
+        background: #f7f9fb;
+
+        .empty {
+            color: #999;
+            text-align: center;
+            padding: 30px 10px;
+        }
+
+        .msg {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+
+            .bubble {
+                display: inline-block;
+                padding: 8px 12px;
+                border-radius: 14px;
+                max-width: 75%;
+                word-break: break-word;
+                line-height: 1.4;
+            }
+            .time {
+                font-size: 11px;
+                color: #999;
+                margin-top: 3px;
+            }
+
+            &.mine {
+                align-items: flex-end;
+                .bubble { background: #2d7ff9; color: #fff; border-bottom-right-radius: 4px; }
+                .time { text-align: right; }
+            }
+            &.theirs {
+                align-items: flex-start;
+                .bubble { background: #fff; border: 1px solid #e0e0e0; border-bottom-left-radius: 4px; }
+            }
+        }
+    }
+
+    .chatbox-input {
+        display: flex;
+        gap: 8px;
+        padding: 10px;
+        border-top: 1px solid #eee;
+
+        textarea {
+            flex: 1;
+            resize: none;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 8px 10px;
+            font-family: inherit;
+            font-size: 14px;
+            &:focus { outline: none; border-color: #2d7ff9; }
+        }
+        button { min-width: 70px; }
+    }
+}

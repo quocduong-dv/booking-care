@@ -1,0 +1,147 @@
+{
+    "homeheader": {
+        "speciality": " Medical specialty",
+        "searchdoctor": "Find a doctor by specialty",
+        "health-facility": "Health facilities",
+        "select-room": "Choose a hospital or clinic",
+        "doctor": "Doctor",
+        "select-doctor": "Choose a doctor",
+        "fee": "Checkup package",
+        "check-health": "General health check",
+        "support": "Support",
+        "welcome": "welcome, ",
+        "login-client": "Sign in"
+    },
+    "banner": {
+        "title1": "MEDICAL PLATFORM",
+        "title2": "COMPREHENSIVE HEALTH CARE",
+        "child1": "Specialized examination",
+        "child2": "Remote examination ",
+        "child3": "General examination",
+        "child4": "Medical tests",
+        "child5": "Mental health",
+        "child6": "Dental examination"
+    },
+    "menu": {
+        "admin": {
+            "dashboard": "Dashboard",
+            "manage-user": "Users System",
+            "manage-doctor": "Manage doctors",
+            "manage-admin": "Manage admin",
+            "crud": "User Management",
+            "crud-redux": "Staff Management",
+            "clinic": "Clinics",
+            "manage-clinic": "Manage Clinics",
+            "specialty": "Specialties",
+            "manage-specialty": "Manage Specialties",
+            "manage-specialty-list": "List of Specialties",
+            "handbook": "Handbook",
+            "manage-handbook": "Manage Handbook",
+            "manage-handbook-list": "List of Handbooks",
+            "manage-clinic-list": "List of Clinics",
+            "appointment": "Appointments",
+            "manage-appointment": "Manage Appointments",
+            "manage-follow-up": "Follow-up Schedule",
+            "prescription": "Prescriptions",
+            "manage-prescription": "Manage Prescriptions",
+            "manage-medicine": "Medicine / Inventory",
+            "doctor-hr": "Doctor HR",
+            "manage-doctor-leave": "Doctor Leave",
+            "manage-work-schedule": "Work Schedule",
+            "report": "Reports & Statistics",
+            "doctor-revenue": "Doctor Revenue",
+            "manage-payment": "Payment Management",
+            "manage-voucher": "Voucher Management",
+            "manage-review": "Review Moderation",
+            "manage-audit": "Audit Log",
+            "manage-batches": "Medicine Batches (Expiry)",
+            "no-show-report": "No-show Report"
+        },
+        "doctor": {
+            "queue-panel": "Queue Panel",
+            "manage-schedule": "Manage Doctor's schedule",
+            "manage-patient": "Manage Doctor's patient",
+            "chat": "Chat",
+            "my-reviews": "My Reviews",
+            "waitlist": "Waitlist",
+            "group-work": "Work",
+            "group-medical": "Medical",
+            "group-comm": "Communication"
+        }
+    },
+    "manage-user": {
+        "add": "Add a new user",
+        "email": "Email",
+        "password": "Password",
+        "first-name": "First name",
+        "last-name": "Last name",
+        "phone-number": "Phone number",
+        "address": "Address ",
+        "gender": "Gender",
+        "position": "Position",
+        "role": "Role",
+        "image": "Avatar",
+        "mfa": "Enable 2FA (email OTP on login)",
+        "save": "Save",
+        "edit": "Edit user"
+    },
+    "homepage": {
+        "outs-standing-doctor": "Outstanding doctor of the week",
+        "more-info": "See more",
+        "popular-specialties": "Popular specialties",
+        "outs-standing-medical-facilities": "Outstanding medical facilities",
+        "hand-book": "Handbook"
+    },
+    "manage-schedule": {
+        "title": "Manage doctor's  examination plans",
+        "choose-doctor": "Choose doctor",
+        "choose-date": "Choose date",
+        "save": "Save infor"
+    },
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Schedule",
+            "no-schedule": "Doctors do not have appointments during this time! Please choose another time .",
+            "choose": "Choose ",
+            "book-free": " and book (free)"
+        },
+        "extra_infor_doctor": {
+            "text-address": " Address of examination",
+            "price": "Examination price:",
+            "detail": "See details",
+            "payment": "Patients can pay costs in the form of:",
+            "hide-price": "Hide price list"
+        },
+        "booking-modal": {
+            "title": "Information on scheduling medical examinations",
+            "fullName": "First and last name",
+            "phoneNumber": "Phone number",
+            "email": "Email",
+            "address": "Address",
+            "reason": "Reason for medical examination",
+            "birthday": "Date of birth",
+            "genders": "Genders",
+            "btnConfirm": "Confirm",
+            "btnCancel": "Cancel",
+            "priceBooking": "Free booking",
+            "price": "Price :"
+        }
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Create more doctors information",
+            "select-doctor": "Choose  doctor",
+            "intro": "Introductory information",
+            "add": "Create information",
+            "save": "Save information ",
+            "price": "Price",
+            "payment": "Payment",
+            "province": "Province",
+            "nameClinic": "Clinic's name",
+            "addressClinic": "Clinic's address",
+            "note": "Note",
+            "specialty": "Specialty",
+            "select-clinic": "Clinic"
+        }
+    }
+}

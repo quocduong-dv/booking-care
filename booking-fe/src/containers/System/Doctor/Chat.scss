@@ -1,0 +1,61 @@
+.doctor-chat-page {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    height: calc(100vh - 100px);
+
+    .sidebar {
+        width: 280px;
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 12px;
+        overflow-y: auto;
+
+        h4 { margin-bottom: 12px; }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                padding: 10px 12px;
+                border-radius: 6px;
+                cursor: pointer;
+                margin-bottom: 4px;
+
+                &:hover { background: #f2f6ff; }
+                &.selected { background: #2d7ff9; color: #fff; }
+
+                .name { flex: 1; }
+                .badge {
+                    background: #e74c3c;
+                    color: #fff;
+                    padding: 2px 8px;
+                    border-radius: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .empty { color: #999; padding: 20px 10px; text-align: center; }
+    }
+
+    .main {
+        flex: 1;
+
+        .placeholder {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            background: #fafafa;
+            border-radius: 8px;
+            border: 1px dashed #ddd;
+        }
+    }
+}

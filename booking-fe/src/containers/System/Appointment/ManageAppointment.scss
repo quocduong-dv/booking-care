@@ -1,0 +1,231 @@
+.manage-appointment-container {
+    padding: 20px;
+
+    .ma-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .btn-create {
+            background: #22c55e;
+            border: none;
+            color: #fff;
+            padding: 9px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(34, 197, 94, 0.25);
+            i { margin-right: 6px; }
+            &:hover { background: #16a34a; color: #fff; }
+        }
+    }
+
+    .ma-title {
+        text-align: left;
+        margin-bottom: 0;
+        font-size: 22px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #333;
+    }
+
+    .ma-filter {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+
+        .form-group {
+            margin-bottom: 0;
+
+            label {
+                font-weight: 600;
+                margin-bottom: 5px;
+                color: #495057;
+            }
+        }
+
+        .btn-primary {
+            padding: 8px 20px;
+
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .ma-stats {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+
+        .stat-item {
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+
+            .stat-number {
+                font-size: 24px;
+                font-weight: 700;
+            }
+
+            .stat-label {
+                font-size: 13px;
+                margin-top: 4px;
+            }
+        }
+
+        .stat-total {
+            background: #17a2b8;
+        }
+
+        .stat-pending {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .stat-confirmed {
+            background: #007bff;
+        }
+
+        .stat-done {
+            background: #28a745;
+        }
+
+        .stat-cancelled {
+            background: #dc3545;
+        }
+    }
+
+    #TableManageAppointment {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+
+        td,
+        th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e8e8e8;
+        }
+
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: #04AA6D;
+            color: white;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .status-badge {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-confirmed {
+            background: #cce5ff;
+            color: #004085;
+        }
+
+        .status-done {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-cancelled {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .action-buttons {
+            white-space: nowrap;
+
+            button {
+                border: none;
+                padding: 5px 10px;
+                margin: 0 3px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                color: white;
+
+                &:hover {
+                    opacity: 0.85;
+                }
+            }
+
+            .btn-confirm {
+                background: #28a745;
+            }
+
+            .btn-complete {
+                background: #007bff;
+            }
+
+            .btn-cancel {
+                background: #dc3545;
+            }
+
+            .btn-followup {
+                background: #f59e0b;
+            }
+
+            .no-action {
+                color: #999;
+            }
+        }
+    }
+
+    .appointment-pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 5px;
+
+        button {
+            padding: 6px 12px;
+            border: 1px solid #dee2e6;
+            background: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+
+            &:hover {
+                background: #e9ecef;
+            }
+
+            &.active {
+                background: #04AA6D;
+                color: white;
+                border-color: #04AA6D;
+            }
+
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

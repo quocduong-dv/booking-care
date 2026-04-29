@@ -1,0 +1,131 @@
+.more-special-container {
+    background-color: #fff;
+    min-height: 100vh;
+    padding-bottom: 50px;
+
+    .more-special-content {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    .more-special-header {
+        margin-bottom: 30px;
+        padding-left: 15px;
+
+        .breadcrumb {
+            font-size: 15px;
+            color: #45c3d2;
+            display: flex;
+            align-items: center;
+
+            i {
+                cursor: pointer;
+                margin-right: 8px;
+                font-size: 18px;
+            }
+
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .more-special-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding: 0 15px;
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+        }
+
+        .specialty-grid-item {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center; // Center content
+            padding: 10px;
+
+            &:hover {
+                .specialty-name {
+                    color: #45c3d2;
+                }
+            }
+
+            .specialty-image-wrapper {
+                position: relative;
+                width: 150px;
+                height: 150px;
+                margin-bottom: 15px;
+
+                .circle-border {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    border: 2px solid #97e4ec; // Light cyan border
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: white;
+                    padding: 5px; // Space between border and image
+
+                    .specialty-image {
+                        width: 130px;
+                        height: 130px;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 50%;
+                    }
+                }
+
+                .smartphone-icon {
+                    position: absolute;
+                    bottom: 5px;
+                    right: 0px;
+                    color: #f7a831; // Orange
+                    background: white;
+                    font-size: 20px;
+                    width: 30px;
+                    height: 45px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid #f7a831;
+                    border-radius: 6px;
+
+                    i {
+                        margin-top: 2px;
+                    }
+                }
+            }
+
+            .specialty-name {
+                font-size: 16px;
+                font-weight: 600;
+                color: #333;
+                text-align: left;
+                width: 100%;
+                padding-left: 10px; // Align a bit more centered visually if needed, but per request left aligned to the block center?
+                // Re-looking at image: Text is left-aligned relative to the start of the Image? No.
+                // Users image: Text is actually Left Aligned.
+                // "Bác sĩ Tiêu hóa từ xa"
+                // The image circle is consistent.
+                // Let's settle on: Text align left within the item container, but item container is centered in grid cell?
+                // Actually let's try text-align left but width matching image.
+                text-align: left;
+            }
+        }
+    }
+}

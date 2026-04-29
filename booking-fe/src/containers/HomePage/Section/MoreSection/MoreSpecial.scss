@@ -1,0 +1,203 @@
+.more-special-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+
+    .more-special-content {
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .more-special-header {
+            text-align: center;
+            margin-bottom: 40px;
+
+            .title-page {
+                font-size: 28px;
+                font-weight: 600;
+                color: #333;
+                margin: 0;
+            }
+        }
+
+        .more-special-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px 20px;
+            padding: 0;
+
+            .specialty-grid-item {
+                background-color: white;
+                border-radius: 8px;
+                padding: 20px;
+                text-align: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                }
+
+                .specialty-image-wrapper {
+                    width: 100%;
+                    margin-bottom: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .specialty-image {
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-color: #eee;
+                        border: 3px solid #f0f0f0;
+                    }
+                }
+
+                .specialty-name {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #333;
+                    line-height: 1.4;
+                    word-break: break-word;
+                    white-space: normal;
+                    text-align: center;
+                    min-height: 44px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:hover {
+                        color: #49bce2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+    .more-special-container {
+        .more-special-content {
+            padding: 30px 15px;
+
+            .more-special-header {
+                margin-bottom: 30px;
+
+                .title-page {
+                    font-size: 24px;
+                }
+            }
+
+            .more-special-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px 15px;
+
+                .specialty-grid-item {
+                    padding: 15px;
+
+                    .specialty-image-wrapper {
+                        .specialty-image {
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+
+                    .specialty-name {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .more-special-container {
+        .more-special-content {
+            padding: 25px 15px;
+
+            .more-special-header {
+                margin-bottom: 25px;
+
+                .title-page {
+                    font-size: 22px;
+                }
+            }
+
+            .more-special-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px 12px;
+
+                .specialty-grid-item {
+                    padding: 15px 10px;
+
+                    .specialty-image-wrapper {
+                        margin-bottom: 12px;
+
+                        .specialty-image {
+                            width: 90px;
+                            height: 90px;
+                        }
+                    }
+
+                    .specialty-name {
+                        font-size: 14px;
+                        min-height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .more-special-container {
+        .more-special-content {
+            padding: 20px 10px;
+
+            .more-special-header {
+                margin-bottom: 20px;
+
+                .title-page {
+                    font-size: 20px;
+                }
+            }
+
+            .more-special-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px 10px;
+
+                .specialty-grid-item {
+                    padding: 12px 8px;
+
+                    .specialty-image-wrapper {
+                        margin-bottom: 10px;
+
+                        .specialty-image {
+                            width: 80px;
+                            height: 80px;
+                        }
+                    }
+
+                    .specialty-name {
+                        font-size: 13px;
+                        min-height: 38px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

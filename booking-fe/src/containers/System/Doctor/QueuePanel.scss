@@ -1,0 +1,127 @@
+.queue-panel-container {
+    padding: 20px;
+
+    h2 { margin: 0 0 20px; color: #1f2937; }
+
+    .controls {
+        display: flex;
+        align-items: flex-end;
+        gap: 12px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+
+        .date-picker {
+            min-width: 200px;
+            label { display: block; font-size: 13px; margin-bottom: 4px; color: #374151; }
+        }
+
+        button {
+            height: 40px;
+            padding: 0 16px;
+            border: 0;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            color: #fff;
+
+            i { margin-right: 6px; }
+        }
+        .btn-assign { background: #6366f1; &:hover { background: #4f46e5; } }
+        .btn-call-next { background: #10b981; &:hover { background: #059669; } }
+        .btn-reload { background: #6b7280; &:hover { background: #4b5563; } }
+    }
+
+    .current-display {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: #fff;
+        text-align: center;
+        padding: 32px 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+
+        .label { font-size: 14px; opacity: 0.9; }
+        .number { font-size: 72px; font-weight: 800; line-height: 1; margin: 8px 0; }
+        .patient-name { font-size: 16px; opacity: 0.95; }
+    }
+
+    .stats-row {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 20px;
+
+        .stat {
+            flex: 1;
+            padding: 14px;
+            background: #fff;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #f59e0b;
+
+            span {
+                display: block;
+                font-size: 28px;
+                font-weight: 700;
+                color: #111827;
+            }
+
+            &.in-prog { border-left-color: #10b981; }
+            &.done { border-left-color: #6366f1; }
+        }
+    }
+
+    .queue-table {
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+            th, td {
+                padding: 10px 12px;
+                text-align: left;
+                border-bottom: 1px solid #f3f4f6;
+            }
+
+            th {
+                background: #f9fafb;
+                font-weight: 600;
+                color: #374151;
+            }
+
+            td.num { font-weight: 700; font-size: 18px; text-align: center; width: 60px; }
+            td.empty { text-align: center; padding: 40px; color: #9ca3af; }
+
+            tr.row-active {
+                background: #d1fae5;
+                animation: pulse 1.5s infinite;
+            }
+
+            .badge {
+                display: inline-block;
+                padding: 3px 10px;
+                border-radius: 12px;
+                font-size: 12px;
+                font-weight: 500;
+
+                &.st-wait { background: #fef3c7; color: #92400e; }
+                &.st-inprog { background: #d1fae5; color: #065f46; }
+                &.st-done { background: #e0e7ff; color: #3730a3; }
+            }
+        }
+    }
+
+    @keyframes pulse {
+        0%, 100% { background: #d1fae5; }
+        50% { background: #a7f3d0; }
+    }
+
+    @media (max-width: 768px) {
+        .current-display .number { font-size: 56px; }
+        .stats-row { flex-direction: column; }
+    }
+}
