@@ -29,3 +29,10 @@ yarn-error.log*
 
 # misc
 /vendor
+
+# third-party plugin (Anthropic skills)
+/skills
+
+# deploy configs (chua thong tin nhay cam)
+/production
+/docker
